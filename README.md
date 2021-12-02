@@ -1,3 +1,8 @@
 # Katas-Codewars-
 
-My solutions to attempted katas. May not be the most optimal but hopefully attain fluency with more katas.
+My solutions to attempted katas (4kyu - 2kyu) in the following languages:
+1. Python
+2. C
+3. Java
+
+Hope to attain fluency and clarity with more katas solved!
