@@ -1,4 +1,12 @@
+# Description #
+# You are at position [0, 0] in maze NxN and you can only move in one of the four cardinal directions (i.e. North, East, South, West). 
+# Return the minimal number of steps to exit position [N-1, N-1] if it is possible to reach the exit from the starting position. Otherwise, return false.
 
+# Note:
+# 1. Empty positions are marked '.'
+# 2. Walls are marked 'W'
+# 3. Start and exit positions are empty in all test cases
+# 4. Maze is represented as a string joined by the newline char, '\n'
 
 
 def path_finder(maze):
