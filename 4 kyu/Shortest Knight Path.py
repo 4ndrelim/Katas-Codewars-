@@ -8,7 +8,7 @@ def knight(p1, p2):
     start = (8-int(p1[1]), ord(p1[0]) - ord('a'))
     end = (8-int(p2[1]), ord(p2[0]) - ord('a'))
     queue = [(start,0)] #BFS
-    seen = [start]
+    seen = {start} #checking in set is O(1)
     moves = [(1,2), (2,1), (2,-1), (1,-2), (-1,-2), (-2,-1), (-2,1), (-1,2)]
     
     while queue:
@@ -19,4 +19,4 @@ def knight(p1, p2):
             row, col = curr[0][0]+r, curr[0][1]+c
             if 0<=row<8 and 0<=col<8 and (row,col) not in seen:
                 queue.append(((row,col), curr[1]+1))
-                seen.append((row,col))
+                seen.add((row,col))
