@@ -43,7 +43,7 @@ class Sudoku(object):
             #check ith little box:
             idx = [False for _ in range(self.size)]
             r = i//self.small * self.small #find index of the first row of the jth layer
-            c = i%self.small * self.small #find index of first col of the jth layer (vert). boxes of jth col is congruent to j mod n
+            c = i%self.small * self.small #find index of first col of the jth layer (vert). boxes of jth layer is congruent to j mod n
             for j in range(self.small):
                 for k in range(self.small):
                     num = self.data[r+j][c+k]
