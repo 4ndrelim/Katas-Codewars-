@@ -23,6 +23,32 @@
 # Note: Range is an integer, Average and Median are float numbers rounded to two decimal places (".2f" in some languages)
 
 
+
+def part(n):
+    #inspired by another users' sol
+    #suppose we can find the product of numbers which sum to k
+    #then the product of numbers that sum to n will be p * (n-k)
+    #build a list of sets where elements of each inner list is the product of numbers that sum to k
+    #for k = 1, .. n
+    #'initialize' with product of numbers that sum to 0 to be 1
+    
+    prod_breakdown = [{1}]
+    for num in range(1,n+1):
+        product = set()
+        for idx, s in enumerate(prod_breakdown):
+            for curr_prod in s:
+                product.add((num-idx)*curr_prod)
+        prod_breakdown.append(product)
+                
+    p = sorted(prod_breakdown[-1])
+    r = max(p) - min(p)
+    a = sum(p)/len(p)
+    m = p[len(p)//2]
+    if len(p)%2 == 0:
+        m = (m + p[len(p)//2 -1])/2
+    return f"Range: {r} Average: {a:.2f} Median: {m:.2f}"
+
+
 # old
 from functools import reduce
 from operator import mul
