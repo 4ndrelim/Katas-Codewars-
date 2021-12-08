@@ -1,20 +1,20 @@
-Description #
-Your task is to find the path through the field which has the lowest cost to go through.
+# Description #
+# Your task is to find the path through the field which has the lowest cost to go through.
 
-As input you will receive:
-  1. a toll_map matrix (as variable t) which holds data about how expensive it is to go through the given field coordinates
-  2. a start coordinate (tuple) which holds information about your starting position
-  3. a finish coordinate (tuple) which holds information about the position you have to get to
+# As input you will receive:
+#   1. a toll_map matrix (as variable t) which holds data about how expensive it is to go through the given field coordinates
+#   2. a start coordinate (tuple) which holds information about your starting position
+#   3. a finish coordinate (tuple) which holds information about the position you have to get to
   
-As output you should return:
-1. the directions list
+# As output you should return:
+# 1. the directions list
 
-CLARIFICATIONS:
-  1. the start and finish tuples have the (x, y) format which means start = (x_1, y_1) and finish = (x_2, y_2), start_pos = field[x_1][y_1] and finish_pos = field[x_2][y_2]
-  2. the total cost is increased after leaving the matrix coordinate, not entering it
-  3. the field will be rectangular, not necessarily a square
-  4. the field will always be of correct shape
-  5. the actual tests will check total_cost based on your returned directions list, not the directions themselves, so you shouldn't worry about having multiple possible solutions
+# CLARIFICATIONS:
+#   1. the start and finish tuples have the (x, y) format which means start = (x_1, y_1) and finish = (x_2, y_2), start_pos = field[x_1][y_1] and finish_pos = field[x_2][y_2]
+#   2. the total cost is increased after leaving the matrix coordinate, not entering it
+#   3. the field will be rectangular, not necessarily a square
+#   4. the field will always be of correct shape
+#   5. the actual tests will check total_cost based on your returned directions list, not the directions themselves, so you shouldn't worry about having multiple possible solutions
 
   
   
