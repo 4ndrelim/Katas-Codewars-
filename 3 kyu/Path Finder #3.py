@@ -15,16 +15,17 @@ def path_finder(area): #Dijkstra's
     def abs(x):
         return x * ((x>0) - (x<0))
     
-    shortest_dist, count, explored = {(0,0): 0}, 0, set()
+    shortest_dist, count = {(0,0): 0}, 0
+#     explored = set() #explored tracker not nec here.
     queue = [(0,count,(0,0))]
     
     while queue:
         cost, _, coord = heappop(queue)
-        if coord in explored:
-            continue
+#         if coord in explored:
+#             continue
         if coord == (N-1,N-1):
             return shortest_dist[coord]
-        explored.add(coord)
+#         explored.add(coord)
         for dx,dy in MOVES:
             n_x, n_y = coord[1]+dx, coord[0]+dy
             if 0<=n_x<N and 0<=n_y<N:
