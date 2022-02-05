@@ -12,6 +12,7 @@
 # There are 100 random tests. 2 <= len(A) == len(B) <= 5, 0 <= n <= 100000. Initial values are in range [-5; 5], and the coefficients are in range [-2; 2]
 
 
+# trick: Consider matrix product
 def matrix_mul(A,B):
     return [[sum([A[row][i] * B[i][col] for i in range(len(B))]) for col in range(len(B[0]))] for row in range(len(A))]
 
