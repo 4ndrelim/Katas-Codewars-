@@ -1,7 +1,16 @@
 # Description #
-You are given a N x N grid of switches that are on (1) or off (0). The task is to activate all switches using a toggle operation.
 
-Executing a toggle operation at coordinates (x, y) will toggle all switches in the row y and column x
+# You are given a N x N grid of switches that are on (1) or off (0). The task is to activate all switches using a toggle operation.
+# Executing a toggle operation at coordinates (x, y) will toggle all switches in the row y and column x
+
+# Example:
+#     solve([[1, 0, 1, 1, 1],
+#         [1, 0, 0, 0, 1],
+#         [1, 0, 0, 0, 1],
+#         [0, 0, 0, 0, 0],
+#         [1, 0, 1, 1, 1]])
+# >>> [(1, 3), (2, 1), (2, 2), (3, 1), (3, 2)]
+
 
 import numpy as np
 def toggle_row_col(grid, size, res):
